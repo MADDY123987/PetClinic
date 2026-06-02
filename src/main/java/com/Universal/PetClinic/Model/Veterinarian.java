@@ -1,13 +1,18 @@
 package com.Universal.PetClinic.Model;
+import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-public class Veterinarian {
-    private long id;
-    private String firstName;
-    private String lastName;
-    private String gender;
-    private String phoneNumber;
-    private String email;
-    private String password;
-    private String userType;
-    private boolean isEnabled;
+@Getter
+@Setter
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@PrimaryKeyJoinColumn(name="veterinarian_id")
+public class Veterinarian extends User {
+
+    private String specialization;
 }
